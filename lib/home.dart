@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_debugging/logger.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 
@@ -15,6 +16,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    logger.d('Home widget');
     return Scaffold(
       drawer: const Drawer2(),
       body: ListView(
@@ -59,7 +61,10 @@ class _HomeState extends State<Home> {
                                 children: <Widget>[
                                   IconButton(
                                     icon: const Icon(Icons.filter_list, color: Colors.blueAccent,),
-                                    onPressed: () => Scaffold.of(context).openDrawer(),
+                                    onPressed: () {
+                                      logger.i('');
+                                      Scaffold.of(context).openDrawer();
+                                    }
                                   ),
                                 ],
                               ),
@@ -158,9 +163,6 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-
-
 
 class CreditCard extends StatelessWidget {
   final int number;

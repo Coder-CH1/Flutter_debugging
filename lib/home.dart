@@ -5,15 +5,12 @@ import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
-
   @override
   State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
   List<String> countries = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
-
-
   @override
   Widget build(BuildContext context) {
     logger.d('Home widget');
@@ -56,9 +53,9 @@ class _HomeState extends State<Home> {
                     children: [
                       Builder(
                           builder: (context) => Column(
-                            children: <Widget>[
+                            children: [
                               Row(
-                                children: <Widget>[
+                                children: [
                                   IconButton(
                                     icon: const Icon(Icons.filter_list, color: Colors.blueAccent,),
                                     onPressed: () {
@@ -171,7 +168,6 @@ class CreditCard extends StatelessWidget {
   final Color color;
 
   const CreditCard({super.key, required this.number, required this.valid, required this.image, required this.color});
-
   @override
   Widget build(BuildContext context) {
     return Padding(

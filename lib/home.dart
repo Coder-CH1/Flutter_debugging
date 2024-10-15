@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
                             ],
                           )
                       ),
-                      const Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 22, fontWeight: FontWeight.w900),),
+                      const Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
                       const SizedBox(
                         height: 5,
                       ),

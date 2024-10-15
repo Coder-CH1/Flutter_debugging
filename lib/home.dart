@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   List<String> services = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
   @override
   Widget build(BuildContext context) {
-    logger.d('Home widget');
+    //logger.d('Home widget');
     return Scaffold(
       drawer: const Drawer2(),
       body: ListView(
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                             ),
                           ],
                         ),
-                        height: 70.0,
+                        height: MediaQuery.of(context).size.height/10,
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                         return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              height: 100, width: MediaQuery.of(context).size.width/3,
+                              height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
                               alignment: Alignment.center,
                               decoration: const BoxDecoration(
                                 color: darkBlue,
@@ -177,7 +177,7 @@ class CreditCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 190,
+        height: MediaQuery.of(context).size.width/6,
         width: MediaQuery.of(context).size.width/1.1,
         decoration: BoxDecoration(
           color: color,

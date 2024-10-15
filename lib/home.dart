@@ -10,7 +10,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<String> countries = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
+  List<String> services = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
   @override
   Widget build(BuildContext context) {
     logger.d('Home widget');
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.filter_list, color: Colors.blueAccent,),
+                                    icon: const Icon(Icons.view_headline_sharp, color: Colors.blueAccent,),
                                     onPressed: () {
                                       logger.i('');
                                       Scaffold.of(context).openDrawer();
@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
                 SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child:Row(
-                      children: countries.map((country){
+                      children: services.map((service){
                         return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -146,7 +146,11 @@ class _HomeState extends State<Home> {
                                   ),
                                 ],
                               ),
-                              child: Text(country, style: const TextStyle(color: Colors.white),),
+                              child: InkWell(
+                              onTap: () {
+
+                              },
+                                  child: Text(service, style: const TextStyle(color: Colors.white),)),
                             )
                         );
                       }).toList(),
@@ -223,5 +227,59 @@ class CreditCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class LocalTransfers extends StatelessWidget {
+  const LocalTransfers({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+
+class AirtimeData extends StatelessWidget {
+  const AirtimeData({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+class OpenAccount extends StatelessWidget {
+  const OpenAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+
+class BillPayment extends StatelessWidget {
+  const BillPayment({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+
+class BVN extends StatelessWidget {
+  const BVN({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
+  }
+}
+
+class RequestATM extends StatelessWidget {
+  const RequestATM({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold();
   }
 }

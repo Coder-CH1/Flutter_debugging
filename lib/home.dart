@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                         height: 70.0,
-                        width: 200,
+                        width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(' Balance \n \$444', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w800
@@ -133,7 +133,7 @@ class _HomeState extends State<Home> {
                         return Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              height: 100, width:150,
+                              height: 100, width: MediaQuery.of(context).size.width/3,
                               alignment: Alignment.center,
                               decoration: const BoxDecoration(
                                 color: darkBlue,
@@ -178,7 +178,7 @@ class CreditCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         height: 190,
-        width: 300,
+        width: MediaQuery.of(context).size.width/1.1,
         decoration: BoxDecoration(
           color: color,
           boxShadow: const [

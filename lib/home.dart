@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   List<String> services = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
   @override
   Widget build(BuildContext context) {
-    //logger.d('Home widget');
+    logger.d('Home widget');
     return Scaffold(
       drawer: const Drawer2(),
       body: ListView(
@@ -132,25 +132,25 @@ class _HomeState extends State<Home> {
                       children: services.map((service){
                         return Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
-                              alignment: Alignment.center,
-                              decoration: const BoxDecoration(
-                                color: darkBlue,
-                                borderRadius: BorderRadius.all(Radius.circular(15)),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: lightBlue,
-                                    offset: Offset(3, 7),
-                                    blurRadius: 10,
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
+                                  alignment: Alignment.center,
+                                  decoration: const BoxDecoration(
+                                    color: darkBlue,
+                                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: lightBlue,
+                                        offset: Offset(3, 7),
+                                        blurRadius: 10,
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                              child: InkWell(
-                              onTap: () {
-
-                              },
-                                  child: Text(service, style: const TextStyle(color: Colors.white),)),
+                                  child: Text(service, style: const TextStyle(color: Colors.white),),
+                                ),
+                              ],
                             )
                         );
                       }).toList(),

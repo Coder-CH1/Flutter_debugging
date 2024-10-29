@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_debugging/logger.dart';
+import 'package:flutter_debugging/logger/logger.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 

@@ -10,7 +10,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<String> services = ["Local Transfers", "Airtime/Data", "Open Account", "Bill payment", "BVN", "Request for ATM"];
+  List<Map<String, dynamic>>services =
+  [{'title': 'Local Transfers', 'widget': const LocalTransfers()},
+    {'title': 'Airtime/Data', 'widget': const AirtimeData()},
+    {'title': 'Open Account', 'widget': const OpenAccount()},
+    {'title': 'Bill payment', 'widget': const BillPayment()},
+    {'title': 'BVN', 'widget': const BVN()},
+    {'title': 'Request for ATM', 'widget': const RequestATM()},
+  ];
+
   @override
   Widget build(BuildContext context) {
     logger.d('Home widget');
@@ -130,28 +138,36 @@ class _HomeState extends State<Home> {
                     scrollDirection: Axis.horizontal,
                     child:Row(
                       children: services.map((service){
-                        return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
-                                  alignment: Alignment.center,
-                                  decoration: const BoxDecoration(
-                                    color: darkBlue,
-                                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: lightBlue,
-                                        offset: Offset(3, 7),
-                                        blurRadius: 10,
-                                      ),
-                                    ],
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context, 
+                                MaterialPageRoute(builder: (context) => service['widget']),
+                            );
+                          },
+                          child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
+                                    alignment: Alignment.center,
+                                    decoration: const BoxDecoration(
+                                      color: darkBlue,
+                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: lightBlue,
+                                          offset: Offset(3, 7),
+                                          blurRadius: 10,
+                                        ),
+                                      ],
+                                    ),
+                                    child: Text(service['title'], style: const TextStyle(color: Colors.white),),
                                   ),
-                                  child: Text(service, style: const TextStyle(color: Colors.white),),
-                                ),
-                              ],
-                            )
+                                ],
+                              )
+                          ),
                         );
                       }).toList(),
                     )
@@ -235,7 +251,14 @@ class LocalTransfers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Local Transfers'),
+      ),
+      body: const Center(
+        child: Text('Local transfers'),
+      ),
+    );
   }
 }
 
@@ -244,7 +267,11 @@ class AirtimeData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: Text('Airtime & Data'),
+      ),
+    );
   }
 }
 
@@ -253,7 +280,11 @@ class OpenAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text('Open account'),
+      ),
+    );
   }
 }
 
@@ -262,7 +293,11 @@ class BillPayment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text('Bill payment'),
+      ),
+    );
   }
 }
 
@@ -271,7 +306,11 @@ class BVN extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text('BVN'),
+      ),
+    );
   }
 }
 
@@ -280,6 +319,10 @@ class RequestATM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text('Request ATM'),
+      ),
+    );
   }
 }

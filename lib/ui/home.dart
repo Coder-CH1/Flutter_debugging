@@ -301,7 +301,6 @@ class AirtimeData extends StatelessWidget {
 
 class OpenAccount extends StatelessWidget {
   const OpenAccount({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -321,7 +320,6 @@ class OpenAccount extends StatelessWidget {
 
 class BillPayment extends StatelessWidget {
   const BillPayment({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -341,7 +339,6 @@ class BillPayment extends StatelessWidget {
 
 class BVN extends StatelessWidget {
   const BVN({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -361,7 +358,6 @@ class BVN extends StatelessWidget {
 
 class RequestATM extends StatelessWidget {
   const RequestATM({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

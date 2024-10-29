@@ -20,6 +20,10 @@ class _HomeState extends State<Home> {
     {'title': 'Request for ATM', 'widget': const RequestATM()},
   ];
 
+  void logError(String message) {
+    logger.e(message);
+  }
+
   @override
   Widget build(BuildContext context) {
     logger.d('Home widget');
@@ -141,6 +145,7 @@ class _HomeState extends State<Home> {
                       children: services.map((service){
                         return GestureDetector(
                           onTap: () {
+                            logger.i('Navigating to ${service['title']}');
                             Navigator.push(
                                 context, 
                                 MaterialPageRoute(builder: (context) => service['widget']),
@@ -252,12 +257,17 @@ class LocalTransfers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Local Transfers'),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            onPressed: () {
+              logger.i('Navigating back from Local transfer screen');
+    Navigator.pop(context);
+    },
+              icon: const
+              Icon(Icons.arrow_back)
         ),
       ),
       body: const Center(

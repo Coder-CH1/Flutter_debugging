@@ -258,7 +258,6 @@ class CreditCard extends StatelessWidget {
 
 class LocalTransfers extends StatelessWidget {
   const LocalTransfers({super.key});
-
   @override
   Widget build(BuildContext context) {
     logger.d('Building local transfer screen');
@@ -283,7 +282,6 @@ class LocalTransfers extends StatelessWidget {
 
 class AirtimeData extends StatelessWidget {
   const AirtimeData({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

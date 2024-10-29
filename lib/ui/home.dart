@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    logger.d('Home widget');
+    logger.d('Home widget services: $services');
     return Scaffold(
       drawer: const Drawer2(),
       body: ListView(
@@ -145,11 +145,16 @@ class _HomeState extends State<Home> {
                       children: services.map((service){
                         return GestureDetector(
                           onTap: () {
-                            logger.i('Navigating to ${service['title']}');
-                            Navigator.push(
-                                context, 
-                                MaterialPageRoute(builder: (context) => service['widget']),
-                            );
+                            try {
+                              logger.i('Navigating to ${service['title']}');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => service['widget']),
+                              );
+                            } catch (e) {
+                              logger.e('Error occured while navigating $e');
+                            }
                           },
                           child: Padding(
                               padding: const EdgeInsets.all(8.0),

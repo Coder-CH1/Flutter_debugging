@@ -254,6 +254,10 @@ class LocalTransfers extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Local Transfers'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
       ),
       body: const Center(
         child: Text('Local transfers'),
@@ -267,8 +271,15 @@ class AirtimeData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Airtime & Data'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
+      ),
+      body: const Center(
         child: Text('Airtime & Data'),
       ),
     );
@@ -280,8 +291,15 @@ class OpenAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Open Account'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
+      ),
+      body: const Center(
         child: Text('Open account'),
       ),
     );
@@ -293,8 +311,15 @@ class BillPayment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bill Payment'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
+      ),
+      body: const Center(
         child: Text('Bill payment'),
       ),
     );
@@ -306,8 +331,15 @@ class BVN extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('BVN'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
+      ),
+      body: const Center(
         child: Text('BVN'),
       ),
     );
@@ -319,8 +351,15 @@ class RequestATM extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Request ATM'),
+        leading: IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: const Icon(Icons.arrow_back)
+        ),
+      ),
+      body: const Center(
         child: Text('Request ATM'),
       ),
     );

@@ -299,11 +299,15 @@ class AirtimeData extends StatefulWidget {
 class _AirtimeDataState extends State<AirtimeData> {
   @override
   Widget build(BuildContext context) {
+    logger.d('Building airtime & data screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
@@ -326,11 +330,15 @@ class OpenAccount extends StatefulWidget {
 class _OpenAccountState extends State<OpenAccount> {
   @override
   Widget build(BuildContext context) {
+    logger.d('Building open account screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              logger.i('Navigating back from open account screen');
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
@@ -353,11 +361,15 @@ class BillPayment extends StatefulWidget {
 class _BillPaymentState extends State<BillPayment> {
   @override
   Widget build(BuildContext context) {
+    logger.d('Building bill payment screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              logger.i('Navigating back from bill payment screen');
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
@@ -380,11 +392,15 @@ class BVN extends StatefulWidget {
 class _BVNState extends State<BVN> {
   @override
   Widget build(BuildContext context) {
+    logger.d('Building bvn screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              logger.i('Navigating back from bvn screen');
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
@@ -407,11 +423,15 @@ class RequestATM extends StatefulWidget {
 class _RequestATMState extends State<RequestATM> {
   @override
   Widget build(BuildContext context) {
+    logger.d('Building request atm screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              logger.i('Navigating back from request atm screen');
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back, color: darkBlue),
         ),
         backgroundColor: lightBlue,

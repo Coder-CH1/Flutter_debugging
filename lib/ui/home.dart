@@ -263,7 +263,9 @@ class LocalTransfers extends StatelessWidget {
     logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Local Transfers'),
+        title: Container(
+            color: lightBlue,
+            child: const Text('Local Transfers')),
         leading: IconButton(
             onPressed: () {
               logger.i('Navigating back from Local transfer screen');
@@ -272,9 +274,13 @@ class LocalTransfers extends StatelessWidget {
               icon: const
               Icon(Icons.arrow_back)
         ),
+        backgroundColor: Colors.white70,
       ),
-      body: const Center(
-        child: Text('Local transfers'),
+      body: Container(
+        color: darkBlue,
+        child: const Center(
+          child: Text('Local transfers'),
+        ),
       ),
     );
   }
@@ -292,6 +298,7 @@ class AirtimeData extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)
         ),
       ),
+      backgroundColor: Colors.blueGrey,
       body: const Center(
         child: Text('Airtime & Data'),
       ),
@@ -311,8 +318,11 @@ class OpenAccount extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)
         ),
       ),
-      body: const Center(
-        child: Text('Open account'),
+      body: Container(
+        color: darkBlue,
+        child: const Center(
+          child: Text('Open account'),
+        ),
       ),
     );
   }
@@ -330,8 +340,12 @@ class BillPayment extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)
         ),
       ),
-      body: const Center(
-        child: Text('Bill payment'),
+      backgroundColor: Colors.blueGrey,
+      body: Container(
+        color: darkBlue,
+        child: const Center(
+          child: Text('Bill payment'),
+        ),
       ),
     );
   }
@@ -349,8 +363,12 @@ class BVN extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)
         ),
       ),
-      body: const Center(
-        child: Text('BVN'),
+      backgroundColor: Colors.blueGrey,
+      body: Container(
+        color: darkBlue,
+        child: const Center(
+          child: Text('BVN'),
+        ),
       ),
     );
   }
@@ -368,8 +386,11 @@ class RequestATM extends StatelessWidget {
             icon: const Icon(Icons.arrow_back)
         ),
       ),
-      body: const Center(
-        child: Text('Request ATM'),
+      body: Container(
+        color: darkBlue,
+        child: const Center(
+          child: Text('Request ATM'),
+        ),
       ),
     );
   }

@@ -11,12 +11,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Map<String, dynamic>>services =
-  [{'title': 'Local Transfers', 'widget': const LocalTransfers()},
-    {'title': 'Airtime/Data', 'widget': const AirtimeData()},
-    {'title': 'Open Account', 'widget': const OpenAccount()},
-    {'title': 'Bill payment', 'widget': const BillPayment()},
-    {'title': 'BVN', 'widget': const BVN()},
-    {'title': 'Request for ATM', 'widget': const RequestATM()},
+  [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
+    {'title': 'Airtime/Data', 'widget': const AirtimeData(title: 'Airtime & Data',)},
+    {'title': 'Open Account', 'widget': const OpenAccount(title: 'Open Account',)},
+    {'title': 'Bill payment', 'widget': const BillPayment(title: 'Bill payment',)},
+    {'title': 'BVN', 'widget': const BVN(title: 'BVN',)},
+    {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
 
   void logError(String message) {
@@ -256,14 +256,21 @@ class CreditCard extends StatelessWidget {
   }
 }
 
-class LocalTransfers extends StatelessWidget {
-  const LocalTransfers({super.key});
+class LocalTransfers extends StatefulWidget {
+  final String title;
+  const LocalTransfers({super.key, required this.title});
+
+  @override
+  State<LocalTransfers> createState() => _LocalTransfersState();
+}
+
+class _LocalTransfersState extends State<LocalTransfers> {
   @override
   Widget build(BuildContext context) {
     logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Local Transfers', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
               logger.i('Navigating back from Local transfer screen');
@@ -274,108 +281,143 @@ class LocalTransfers extends StatelessWidget {
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('Local transfers', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }
 }
 
-class AirtimeData extends StatelessWidget {
-  const AirtimeData({super.key});
+class AirtimeData extends StatefulWidget {
+  final String title;
+  const AirtimeData({super.key, required this.title});
+
+  @override
+  State<AirtimeData> createState() => _AirtimeDataState();
+}
+
+class _AirtimeDataState extends State<AirtimeData> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Airtime & Data', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('Airtime & Data', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }
 }
 
-class OpenAccount extends StatelessWidget {
-  const OpenAccount({super.key});
+class OpenAccount extends StatefulWidget {
+  final String title;
+  const OpenAccount({super.key, required this.title});
+
+  @override
+  State<OpenAccount> createState() => _OpenAccountState();
+}
+
+class _OpenAccountState extends State<OpenAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Open Account', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('Open account', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }
 }
 
-class BillPayment extends StatelessWidget {
-  const BillPayment({super.key});
+class BillPayment extends StatefulWidget {
+  final String title;
+  const BillPayment({super.key, required this.title});
+
+  @override
+  State<BillPayment> createState() => _BillPaymentState();
+}
+
+class _BillPaymentState extends State<BillPayment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bill Payment', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('Bill payment', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }
 }
 
-class BVN extends StatelessWidget {
-  const BVN({super.key});
+class BVN extends StatefulWidget {
+  final String title;
+  const BVN({super.key, required this.title});
+
+  @override
+  State<BVN> createState() => _BVNState();
+}
+
+class _BVNState extends State<BVN> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BVN', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('BVN', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }
 }
 
-class RequestATM extends StatelessWidget {
-  const RequestATM({super.key});
+class RequestATM extends StatefulWidget {
+  final String title;
+  const RequestATM({super.key, required this.title});
+
+  @override
+  State<RequestATM> createState() => _RequestATMState();
+}
+
+class _RequestATMState extends State<RequestATM> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Request ATM', style: TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back, color: darkBlue),
         ),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
-        child: Text('Request ATM', style: TextStyle(color: darkBlue)),
+      body: Center(
+        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
     );
   }

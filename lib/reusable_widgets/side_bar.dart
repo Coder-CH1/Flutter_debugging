@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 
 
-class Drawer2 extends StatelessWidget {
-  const Drawer2({
+class SideMenu extends StatelessWidget {
+  const SideMenu({
     super.key,
   });
 

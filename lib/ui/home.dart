@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     logger.d('Home widget services: $services');
     return Scaffold(
-      drawer: const Drawer2(),
+      drawer: const SideMenu(),
       body: ListView(
           padding: EdgeInsets.zero,
           scrollDirection: Axis.vertical,

@@ -263,20 +263,19 @@ class LocalTransfers extends StatelessWidget {
     logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Local Transfers'),
+        title: const Text('Local Transfers', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
               logger.i('Navigating back from Local transfer screen');
     Navigator.pop(context);
     },
               icon: const
-              Icon(Icons.arrow_back)
+              Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Local transfers', style: TextStyle(color: Colors.white)),
+        child: Text('Local transfers', style: TextStyle(color: darkBlue)),
       ),
     );
   }
@@ -288,16 +287,15 @@ class AirtimeData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Airtime & Data'),
+        title: const Text('Airtime & Data', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Airtime & Data', style: TextStyle(color: Colors.white)),
+        child: Text('Airtime & Data', style: TextStyle(color: darkBlue)),
       ),
     );
   }
@@ -309,16 +307,15 @@ class OpenAccount extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Open Account'),
+        title: const Text('Open Account', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Open account', style: TextStyle(color: Colors.white)),
+        child: Text('Open account', style: TextStyle(color: darkBlue)),
       ),
     );
   }
@@ -330,16 +327,15 @@ class BillPayment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bill Payment'),
+        title: const Text('Bill Payment', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Bill payment', style: TextStyle(color: Colors.white)),
+        child: Text('Bill payment', style: TextStyle(color: darkBlue)),
       ),
     );
   }
@@ -351,16 +347,15 @@ class BVN extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BVN'),
+        title: const Text('BVN', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            icon: const Icon(Icons.arrow_back, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('BVN', style: TextStyle(color: Colors.white)),
+        child: Text('BVN', style: TextStyle(color: darkBlue)),
       ),
     );
   }
@@ -372,16 +367,15 @@ class RequestATM extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Request ATM'),
+        title: const Text('Request ATM', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
-            icon: const Icon(Icons.arrow_back)
+            icon: const Icon(Icons.arrow_back, color: darkBlue),
         ),
         backgroundColor: lightBlue,
       ),
-      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Request ATM', style: TextStyle(color: Colors.white)),
+        child: Text('Request ATM', style: TextStyle(color: darkBlue)),
       ),
     );
   }

@@ -263,9 +263,7 @@ class LocalTransfers extends StatelessWidget {
     logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-            color: lightBlue,
-            child: const Text('Local Transfers')),
+        title: const Text('Local Transfers'),
         leading: IconButton(
             onPressed: () {
               logger.i('Navigating back from Local transfer screen');
@@ -274,13 +272,11 @@ class LocalTransfers extends StatelessWidget {
               icon: const
               Icon(Icons.arrow_back)
         ),
-        backgroundColor: Colors.white70,
+        backgroundColor: lightBlue,
       ),
-      body: Container(
-        color: darkBlue,
-        child: const Center(
-          child: Text('Local transfers'),
-        ),
+      backgroundColor: darkBlue,
+      body: const Center(
+        child: Text('Local transfers', style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -297,10 +293,11 @@ class AirtimeData extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back)
         ),
+        backgroundColor: lightBlue,
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: darkBlue,
       body: const Center(
-        child: Text('Airtime & Data'),
+        child: Text('Airtime & Data', style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -317,12 +314,11 @@ class OpenAccount extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back)
         ),
+        backgroundColor: lightBlue,
       ),
-      body: Container(
-        color: darkBlue,
-        child: const Center(
-          child: Text('Open account'),
-        ),
+      backgroundColor: darkBlue,
+      body: const Center(
+        child: Text('Open account', style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -339,13 +335,11 @@ class BillPayment extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back)
         ),
+        backgroundColor: lightBlue,
       ),
-      backgroundColor: Colors.blueGrey,
-      body: Container(
-        color: darkBlue,
-        child: const Center(
-          child: Text('Bill payment'),
-        ),
+      backgroundColor: darkBlue,
+      body: const Center(
+        child: Text('Bill payment', style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -362,13 +356,11 @@ class BVN extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back)
         ),
+        backgroundColor: lightBlue,
       ),
-      backgroundColor: Colors.blueGrey,
-      body: Container(
-        color: darkBlue,
-        child: const Center(
-          child: Text('BVN'),
-        ),
+      backgroundColor: darkBlue,
+      body: const Center(
+        child: Text('BVN', style: TextStyle(color: Colors.white)),
       ),
     );
   }
@@ -385,12 +377,11 @@ class RequestATM extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(Icons.arrow_back)
         ),
+        backgroundColor: lightBlue,
       ),
-      body: Container(
-        color: darkBlue,
-        child: const Center(
-          child: Text('Request ATM'),
-        ),
+      backgroundColor: darkBlue,
+      body: const Center(
+        child: Text('Request ATM', style: TextStyle(color: Colors.white)),
       ),
     );
   }

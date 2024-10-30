@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                               Row(
                                 children: [
                                   IconButton(
-                                    icon: const Icon(Icons.view_headline_sharp, color: Colors.blueAccent,),
+                                    icon: const Icon(Icons.view_headline_sharp, color: blueColor),
                                     onPressed: () {
                                       logger.i('');
                                       Scaffold.of(context).openDrawer();
@@ -80,9 +80,12 @@ class _HomeState extends State<Home> {
                             ],
                           )
                       ),
-                      const Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 10),
+                        child: Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
+                      ),
                       const SizedBox(
-                        height: 5,
+                        height: 2,
                       ),
                       const Text('Melvis Chi', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
                     ],
@@ -99,11 +102,11 @@ class _HomeState extends State<Home> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey[100],
+                          color: darkBlue,
                           borderRadius: const BorderRadius.all(Radius.circular(15)),
                           boxShadow: const [
                             BoxShadow(
-                              color: Colors.lightBlue,
+                              color: lightBlue,
                               offset: Offset(3, 7),
                               blurRadius: 15,
                             ),
@@ -113,7 +116,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(' Balance \n \$444', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w800
+                          child: Text(' Balance \n \$444', style: TextStyle(color: whiteColor, fontSize: 22, fontWeight: FontWeight.w800
                           ),
                           ),
                         ),
@@ -131,7 +134,7 @@ class _HomeState extends State<Home> {
               children: [
                 const Padding(
                   padding: EdgeInsets.only(left: 8.0),
-                  child: Text('Services', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w800
+                  child: Text('Services', style: TextStyle(color: lightBlue, fontSize: 22, fontWeight: FontWeight.w800
                   ),
                   ),
                 ),
@@ -173,7 +176,7 @@ class _HomeState extends State<Home> {
                                         ),
                                       ],
                                     ),
-                                    child: Text(service['title'], style: const TextStyle(color: Colors.white),),
+                                    child: Text(service['title'], style: const TextStyle(color: whiteColor),),
                                   ),
                                 ],
                               )
@@ -226,7 +229,7 @@ class CreditCard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Image.asset('assets/images/$image', width: 50,),
                   ),
-                  const Icon(Icons.more_vert, color: Colors.white,)
+                  const Icon(Icons.more_vert, color: whiteColor)
                 ],
               ),
             ),

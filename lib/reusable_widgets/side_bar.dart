@@ -56,7 +56,11 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
-      body: Center(child: Text('This is the $title screen')),
+      body: const Column(
+        children: [
+
+        ],
+      )
     );
   }
 }
@@ -71,7 +75,11 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
-      body: Center(child: Text('This is the $title screen')),
+      body: const Column(
+        children: [
+
+        ],
+      )
     );
   }
 }

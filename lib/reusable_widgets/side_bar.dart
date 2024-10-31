@@ -54,8 +54,9 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
+      body: Center(child: Text('This is the $title screen')),
     );
   }
 }
@@ -68,8 +69,9 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
+      body: Center(child: Text('This is the $title screen')),
     );
   }
 }

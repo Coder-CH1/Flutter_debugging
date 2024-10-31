@@ -13,20 +13,32 @@ class SideMenu extends StatelessWidget {
       backgroundColor: whiteColor,
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const [
-          DrawerHeader(decoration: BoxDecoration(
+        children: [
+          const DrawerHeader(decoration: BoxDecoration(
               color: darkBlue,
             ),child:
           Text('Agbachi Chidiogo Melvis', style: TextStyle(color: whiteColor, fontSize: 22, fontWeight: FontWeight.w400),
           ),
           ),
           ListTile(
-            leading: Icon(Icons.home, color: darkBlue,),
-            title: Text('Profile', style: TextStyle(color: darkBlue),),
+            leading: const Icon(Icons.home, color: darkBlue,),
+            title: const Text('Profile', style: TextStyle(color: darkBlue),),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Profile(title: 'Profile')),
+              );
+            },
           ),
-          ListTile(
-            leading: Icon(Icons.settings, color: darkBlue,),
-            title: Text('Settings & Privacy', style: TextStyle(color: darkBlue),),
+           ListTile(
+            leading: const Icon(Icons.settings, color: darkBlue,),
+            title: const Text('Settings & Privacy', style: TextStyle(color: darkBlue),),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Profile(title: 'Settings & Privacy')),
+              );
+            },
           ),
         ],
       ),
@@ -35,19 +47,29 @@ class SideMenu extends StatelessWidget {
 }
 
 class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+  final String title;
+  const Profile({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+    );
   }
 }
 
 class Settings extends StatelessWidget {
-  const Settings({Key? key}) : super(key: key);
+  final String title;
+  const Settings({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+    );
   }
 }

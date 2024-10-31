@@ -101,10 +101,10 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: darkBlue,
-                          borderRadius: const BorderRadius.all(Radius.circular(15)),
-                          boxShadow: const [
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          boxShadow: [
                             BoxShadow(
                               color: lightBlue,
                               offset: Offset(3, 7),
@@ -116,7 +116,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(' Balance \n \$444', style: TextStyle(color: whiteColor, fontSize: 22, fontWeight: FontWeight.w800
+                          child: Text(' Balance \n \$444', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w300
                           ),
                           ),
                         ),

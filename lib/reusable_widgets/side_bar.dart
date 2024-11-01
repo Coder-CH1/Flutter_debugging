@@ -61,6 +61,7 @@ class Profile extends StatelessWidget {
           children: [
             Icon(Icons.person, color: darkBlue, size: 100),
             Text(''),
+            Text(''),
           ],
         ),
       )
@@ -78,8 +79,8 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
-      body: const Column(
-        children: [
+      body: ListView(
+        children: const [
 
         ],
       )

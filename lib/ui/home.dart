@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Positioned(
-                  top: 150,
+                  top: 170,
                   child: SizedBox(
                     width: 900,
                     height: 190,
@@ -66,6 +66,7 @@ class _HomeState extends State<Home> {
                       Builder(
                           builder: (context) => Column(
                             children: [
+                              SizedBox(height: 20),
                               Row(
                                 children: [
                                   IconButton(
@@ -80,14 +81,11 @@ class _HomeState extends State<Home> {
                             ],
                           )
                       ),
-                      // const Padding(
-                      //   padding: EdgeInsets.only(top: 10),
-                      //   child: Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
-                      // ),
-                      // const SizedBox(
-                      //   height: 2,
-                      // ),
-                      const Text('Hi Melvis', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
+                      SizedBox(height: 20),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('Hi Melvis', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
+                      ),
                     ],
                   ),
                 ),

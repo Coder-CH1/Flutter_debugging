@@ -80,14 +80,14 @@ class _HomeState extends State<Home> {
                             ],
                           )
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 10),
-                        child: Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
-                      ),
-                      const SizedBox(
-                        height: 2,
-                      ),
-                      const Text('Melvis Chi', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
+                      // const Padding(
+                      //   padding: EdgeInsets.only(top: 10),
+                      //   child: Text('Good Day,', style: TextStyle(color: lightBlue, fontSize: 16, fontWeight: FontWeight.w900),),
+                      // ),
+                      // const SizedBox(
+                      //   height: 2,
+                      // ),
+                      const Text('Hi Melvis', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
                     ],
                   ),
                 ),

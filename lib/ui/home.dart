@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_debugging/logger/logger.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
+import 'package:flutter_emoji/flutter_emoji.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -25,6 +26,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var parser = EmojiParser();
+    String greetings = parser.emojify(':wave: Hi Melvis');
     logger.d('Home widget services: $services');
     return Scaffold(
       drawer: const SideMenu(),
@@ -66,7 +69,7 @@ class _HomeState extends State<Home> {
                       Builder(
                           builder: (context) => Column(
                             children: [
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               Row(
                                 children: [
                                   IconButton(
@@ -81,11 +84,9 @@ class _HomeState extends State<Home> {
                             ],
                           )
                       ),
-                      SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('Hi Melvis', style: TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),),
-                      ),
+                      const SizedBox(height: 20),
+                          Text(greetings,
+                          style: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
                     ],
                   ),
                 ),

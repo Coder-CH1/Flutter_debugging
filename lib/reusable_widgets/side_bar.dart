@@ -56,10 +56,13 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
-      body: const Column(
-        children: [
-
-        ],
+      body: const Center(
+        child: Column(
+          children: [
+            Icon(Icons.person, color: darkBlue, size: 100),
+            Text(''),
+          ],
+        ),
       )
     );
   }

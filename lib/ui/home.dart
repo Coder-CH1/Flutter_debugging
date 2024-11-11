@@ -283,8 +283,10 @@ class _LocalTransfersState extends State<LocalTransfers> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }
@@ -314,8 +316,10 @@ class _AirtimeDataState extends State<AirtimeData> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }
@@ -345,8 +349,10 @@ class _OpenAccountState extends State<OpenAccount> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }
@@ -376,8 +382,10 @@ class _BillPaymentState extends State<BillPayment> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }
@@ -407,8 +415,10 @@ class _BVNState extends State<BVN> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }
@@ -438,8 +448,10 @@ class _RequestATMState extends State<RequestATM> {
         ),
         backgroundColor: lightBlue,
       ),
-      body: Center(
-        child: Text(widget.title, style: const TextStyle(color: darkBlue)),
+      body: Column(
+        children: [
+          Text(widget.title, style: const TextStyle(color: darkBlue)),
+        ],
       ),
     );
   }

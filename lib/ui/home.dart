@@ -285,7 +285,9 @@ class _LocalTransfersState extends State<LocalTransfers> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );
@@ -318,7 +320,9 @@ class _AirtimeDataState extends State<AirtimeData> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );
@@ -351,7 +355,9 @@ class _OpenAccountState extends State<OpenAccount> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );
@@ -384,7 +390,9 @@ class _BillPaymentState extends State<BillPayment> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );
@@ -417,7 +425,9 @@ class _BVNState extends State<BVN> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );
@@ -450,7 +460,9 @@ class _RequestATMState extends State<RequestATM> {
       ),
       body: Column(
         children: [
-          Text(widget.title, style: const TextStyle(color: darkBlue)),
+          ListView(
+            children: [],
+          )
         ],
       ),
     );

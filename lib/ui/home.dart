@@ -12,12 +12,12 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Map<String, dynamic>>services =
-  [{'title': 'Local Transfers', 'route': '/local transfers'},
-    {'title': 'Airtime/Data', 'route': '/airtime & data'},
-    {'title': 'Open Account', 'route': '/open account'},
-    {'title': 'Bill payment', 'route': '/bill payment'},
-    {'title': 'BVN', 'route': '/bvn'},
-    {'title': 'Request for ATM', 'route': '/request for atm'},
+  [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
+    {'title': 'Airtime/Data', 'widget': const AirtimeData(title: 'Airtime & Data',)},
+    {'title': 'Open Account', 'widget': const OpenAccount(title: 'Open Account',)},
+    {'title': 'Bill payment', 'widget': const BillPayment(title: 'Bill payment',)},
+    {'title': 'BVN', 'widget': const BVN(title: 'BVN',)},
+    {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
 
   void logError(String message) {
@@ -148,9 +148,10 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             try {
                               logger.i('Navigating to ${service['title']}');
-                              Navigator.pushNamed(
+                              Navigator.push(
                                 context,
-                                service['route']
+                                MaterialPageRoute(
+                                    builder: (context) => service['widget']),
                               );
                             } catch (e) {
                               logger.e('Error occured while navigating $e');

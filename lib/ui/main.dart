@@ -3,6 +3,8 @@ import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
 
+import '../logger/logger.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,15 +38,15 @@ class _HomeState extends State<Home> {
     {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
 
-  // void logError(String message) {
-  //   logger.e(message);
-  // }
+  void logError(String message) {
+    logger.e(message);
+  }
 
   @override
   Widget build(BuildContext context) {
     var parser = EmojiParser();
     String greetings = parser.emojify(':wave: Hi Melvis');
-    //logger.d('Home widget services: $services');
+    logger.d('Home widget services: $services');
     return Scaffold(
       drawer: const SideMenu(),
       body: ListView(
@@ -132,7 +134,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(' Balance \n \N444', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w300
+                          child: Text(' Balance \n N444', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w300
                           ),
                           ),
                         ),
@@ -164,14 +166,14 @@ class _HomeState extends State<Home> {
                         return GestureDetector(
                           onTap: () {
                             try {
-                              //logger.i('Navigating to ${service['title']}');
+                              logger.i('Navigating to ${service['title']}');
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => service['widget']),
                               );
                             } catch (e) {
-                              // logger.e('Error occured while navigating $e');
+                               logger.e('Error occured while navigating $e');
                             }
                           },
                           child: Padding(
@@ -286,13 +288,13 @@ class LocalTransfers extends StatefulWidget {
 class _LocalTransfersState extends State<LocalTransfers> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building local transfer screen');
+    logger.d('Building local transfer screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              //logger.i('Navigating back from Local transfer screen');
+              logger.i('Navigating back from Local transfer screen');
               Navigator.pop(context);
             },
             icon: const
@@ -320,13 +322,13 @@ class AirtimeData extends StatefulWidget {
 class _AirtimeDataState extends State<AirtimeData> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building airtime & data screen');
+    logger.d('Building airtime & data screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              //logger.i('Navigating back from airtime & data screen');
+              logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
@@ -353,13 +355,13 @@ class OpenAccount extends StatefulWidget {
 class _OpenAccountState extends State<OpenAccount> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building open account screen');
+    logger.d('Building open account screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              //logger.i('Navigating back from open account screen');
+              logger.i('Navigating back from open account screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
@@ -386,13 +388,13 @@ class BillPayment extends StatefulWidget {
 class _BillPaymentState extends State<BillPayment> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building bill payment screen');
+    logger.d('Building bill payment screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              //logger.i('Navigating back from bill payment screen');
+              logger.i('Navigating back from bill payment screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
@@ -419,13 +421,13 @@ class BVN extends StatefulWidget {
 class _BVNState extends State<BVN> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building bvn screen');
+    logger.d('Building bvn screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              //logger.i('Navigating back from bvn screen');
+              logger.i('Navigating back from bvn screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back, color: darkBlue)
@@ -452,13 +454,13 @@ class RequestATM extends StatefulWidget {
 class _RequestATMState extends State<RequestATM> {
   @override
   Widget build(BuildContext context) {
-    //logger.d('Building request atm screen');
+    logger.d('Building request atm screen');
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         leading: IconButton(
           onPressed: () {
-            //logger.i('Navigating back from request atm screen');
+            logger.i('Navigating back from request atm screen');
             Navigator.pop(context);
           },
           icon: const Icon(Icons.arrow_back, color: darkBlue),

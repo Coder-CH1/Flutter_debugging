@@ -36,7 +36,7 @@ class SideMenu extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Profile(title: 'Settings & Privacy')),
+                MaterialPageRoute(builder: (context) => const Settings(title: 'Settings & Privacy')),
               );
             },
           ),
@@ -60,8 +60,6 @@ class Profile extends StatelessWidget {
         child: Column(
           children: [
             Icon(Icons.person, color: darkBlue, size: 100),
-            Text(''),
-            Text(''),
           ],
         ),
       )
@@ -79,10 +77,11 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
       ),
-      body: ListView(
-        children: const [
-
-        ],
+      body: ListView.builder(
+        itemCount: 15,
+          itemBuilder: (context, index) {
+          return const ListTile(title: Text('chi'));
+          }
       )
     );
   }

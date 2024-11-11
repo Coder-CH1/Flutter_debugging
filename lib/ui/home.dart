@@ -148,10 +148,9 @@ class _HomeState extends State<Home> {
                           onTap: () {
                             try {
                               logger.i('Navigating to ${service['title']}');
-                              Navigator.push(
+                              Navigator.pushNamed(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => service['widget']),
+                                service['route']
                               );
                             } catch (e) {
                               logger.e('Error occured while navigating $e');

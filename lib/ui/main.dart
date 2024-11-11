@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const Home(),
         '/local-transfer': (context) => const LocalTransfers(title: 'Local Transfers'),
-        '/local-transfer': (context) => const AirtimeData(title: 'Airtime & Data'),
-        '/local-transfer': (context) => const OpenAccount(title: 'Open Account'),
-        '/local-transfer': (context) => const BillPayment(title: 'Bill payment'),
-        '/local-transfer': (context) => const BVN(title: 'BVN'),
-        '/local-transfer': (context) => const RequestATM(title: 'Request for ATM')
+        '/airtime-data': (context) => const AirtimeData(title: 'Airtime & Data'),
+        '/open-account': (context) => const OpenAccount(title: 'Open Account'),
+        '/bill-payment': (context) => const BillPayment(title: 'Bill payment'),
+        '/bvn': (context) => const BVN(title: 'BVN'),
+        '/request-atm': (context) => const RequestATM(title: 'Request for ATM')
       },
     );
   }

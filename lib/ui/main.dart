@@ -12,9 +12,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Home(),
+        '/local-transfer': (context) => const LocalTransfers(title: 'Local Transfers'),
+        '/local-transfer': (context) => const AirtimeData(title: 'Airtime & Data'),
+        '/local-transfer': (context) => const OpenAccount(title: 'Open Account'),
+        '/local-transfer': (context) => const BillPayment(title: 'Bill payment'),
+        '/local-transfer': (context) => const BVN(title: 'BVN'),
+        '/local-transfer': (context) => const RequestATM(title: 'Request for ATM')
+      },
     );
   }
 }

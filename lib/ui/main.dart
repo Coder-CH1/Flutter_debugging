@@ -29,7 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<Color> _colorsContainer = [darkBlue, darkBlue, darkBlue];
+  final List<Color> _colorsContainer = [darkBlue, darkBlue, darkBlue, darkBlue, darkBlue, darkBlue];
   List<Map<String, dynamic>>services =
   [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
     {'title': 'Airtime/Data', 'widget': const AirtimeData(title: 'Airtime & Data',)},
@@ -169,46 +169,47 @@ class _HomeState extends State<Home> {
                     scrollDirection: Axis.horizontal,
                     child:Row(
                       children: services.map((service){
+                        int index = services.indexOf(service);
                         return Center(
                           child: GestureDetector(
                             onTap: () {
-                              try {
-                                logger.i('Navigating to ${service['title']}');
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => service['widget']),
-                                );
-                              } catch (e) {
-                                 logger.e('Error occured while navigating $e');
-                              }
+                              _toggleColor(index);
+                              Future.delayed(const Duration(seconds: 1), ()
+                              {
+                                try {
+                                  logger.i('Navigating to ${service['title']}');
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (
+                                            context) => service['widget']),
+                                  );
+                                } catch (e) {
+                                  logger.e('Error occured while navigating $e');
+                                }
+                              });
                             },
                             child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   children: [
-                                    Center(
-                                      child: GestureDetector(
-                                        onTap: ,
-                                        child: AnimatedContainer(
-                                          height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
-                                          alignment: Alignment.center,
-                                          decoration: BoxDecoration(
-                                            color: _colorsContainer,
-                                            borderRadius: const BorderRadius.all(Radius.circular(15)),
-                                            boxShadow: const [
-                                              BoxShadow(
-                                                color: lightBlue,
-                                                offset: Offset(3, 7),
-                                                blurRadius: 10,
-                                              ),
-                                            ],
+                                    AnimatedContainer(
+                                      height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                        color: _colorsContainer[index],
+                                        borderRadius: const BorderRadius.all(Radius.circular(15)),
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            color: lightBlue,
+                                            offset: Offset(3, 7),
+                                            blurRadius: 10,
                                           ),
-                                          duration: const Duration(seconds: 1),
-                                          curve: Curves.fastOutSlowIn,
-                                          child: Text(service['title'], style: const TextStyle(color: whiteColor),),
-                                        ),
+                                        ],
                                       ),
+                                      duration: const Duration(seconds: 1),
+                                      curve: Curves.fastOutSlowIn,
+                                      child: Text(service['title'], style: const TextStyle(color: whiteColor),),
                                     ),
                                   ],
                                 )

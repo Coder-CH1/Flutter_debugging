@@ -55,6 +55,7 @@ class Profile extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: darkBlue)),
+        backgroundColor: lightBlue,
       ),
       body: const Center(
         child: Column(
@@ -85,6 +86,7 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
+        backgroundColor: lightBlue,
       ),
       body: ListView.builder(
        itemCount: items.length,
@@ -96,7 +98,11 @@ class _SettingsState extends State<Settings> {
               child: ListTile(
                 title: Text(items[index]),
                 trailing: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, 
+                          MaterialPageRoute(builder: (context) => const DetailsScreen())
+                      );
+                    },
                     icon: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey),
                 ),
               ),
@@ -113,6 +119,28 @@ class _SettingsState extends State<Settings> {
         );
       }
       )
+    );
+  }
+}
+
+
+class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Details Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+             // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
     );
   }
 }

@@ -297,7 +297,7 @@ class _LocalTransfersState extends State<LocalTransfers> {
               Navigator.pop(context);
             },
             icon: const
-            Icon(Icons.arrow_back, color: darkBlue)
+            Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
@@ -330,7 +330,7 @@ class _AirtimeDataState extends State<AirtimeData> {
               logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back, color: darkBlue)
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
@@ -363,7 +363,7 @@ class _OpenAccountState extends State<OpenAccount> {
               logger.i('Navigating back from open account screen');
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back, color: darkBlue)
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
@@ -396,7 +396,7 @@ class _BillPaymentState extends State<BillPayment> {
               logger.i('Navigating back from bill payment screen');
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back, color: darkBlue)
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
@@ -429,7 +429,7 @@ class _BVNState extends State<BVN> {
               logger.i('Navigating back from bvn screen');
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back, color: darkBlue)
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
         ),
         backgroundColor: lightBlue,
       ),
@@ -462,7 +462,7 @@ class _RequestATMState extends State<RequestATM> {
             logger.i('Navigating back from request atm screen');
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.arrow_back, color: darkBlue),
+          icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue),
         ),
         backgroundColor: lightBlue,
       ),

@@ -17,7 +17,7 @@ class SideMenu extends StatelessWidget {
           const DrawerHeader(decoration: BoxDecoration(
               color: darkBlue,
             ),child:
-          Text('Agbachi Chidiogo Melvis', style: TextStyle(color: whiteColor, fontSize: 22, fontWeight: FontWeight.w400),
+          Text('Agbachi Chidiogo Melvis', style: TextStyle(color: lightBlue, fontSize: 22, fontWeight: FontWeight.w400),
           ),
           ),
           ListTile(

@@ -88,36 +88,39 @@ class _SettingsState extends State<Settings> {
         title: Text(widget.title, style: const TextStyle(color: darkBlue)),
         backgroundColor: lightBlue,
       ),
-      body: ListView.builder(
-       itemCount: items.length,
-      itemBuilder: (context, index ) {
-        return Column(
-          children: [
-            SizedBox(
-              height: 60,
-              child: ListTile(
-                title: Text(items[index]),
-                trailing: IconButton(
-                    onPressed: () {
-                      Navigator.push(context, 
-                          MaterialPageRoute(builder: (context) => const DetailsScreen())
-                      );
-                    },
-                    icon: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey),
+      body: InkWell(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const DetailsScreen())
+          );
+        },
+        child: ListView.builder(
+         itemCount: items.length,
+        itemBuilder: (context, index ) {
+          return Column(
+            children: [
+              SizedBox(
+                height: 60,
+                child: ListTile(
+                  title: Text(items[index]),
+                  trailing: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey),
+                  ),
                 ),
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Divider(
-                color: Colors.grey,
-                thickness: 1,
-                height: 1,
-              ),
-            )
-          ],
-        );
-      }
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Divider(
+                  color: Colors.grey,
+                  thickness: 1,
+                  height: 1,
+                ),
+              )
+            ],
+          );
+        }
+        ),
       )
     );
   }

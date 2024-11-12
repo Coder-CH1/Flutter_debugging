@@ -58,7 +58,6 @@ class _HomeState extends State<Home> {
                 Container(
                   height: 370,
                   decoration: const BoxDecoration(
-                    color: Colors.black12,
                       borderRadius: BorderRadius.only(bottomRight: Radius.circular(50), bottomLeft: Radius.circular(50))
                   ),
                 ),
@@ -94,7 +93,7 @@ class _HomeState extends State<Home> {
                                   IconButton(
                                       icon: const Icon(Icons.view_headline_sharp, color: blueColor),
                                       onPressed: () {
-                                        //logger.i('');
+                                        logger.i('');
                                         Scaffold.of(context).openDrawer();
                                       }
                                   ),

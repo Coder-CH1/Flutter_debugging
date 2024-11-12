@@ -97,13 +97,13 @@ class _SettingsState extends State<Settings> {
                 title: Text(items[index]),
                 trailing: IconButton(
                     onPressed: () {},
-                    icon: const Icon(Icons.arrow_forward_ios_sharp),
+                    icon: const Icon(Icons.arrow_forward_ios_sharp, color: Colors.grey),
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: const Divider(
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Divider(
                 color: Colors.grey,
                 thickness: 1,
                 height: 1,

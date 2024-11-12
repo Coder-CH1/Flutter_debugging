@@ -21,7 +21,7 @@ class SideMenu extends StatelessWidget {
           ),
           ),
           ListTile(
-            leading: const Icon(Icons.home, color: darkBlue,),
+            leading: const Icon(Icons.home, color: lightBlue,),
             title: const Text('Profile', style: TextStyle(color: darkBlue),),
             onTap: () {
               Navigator.push(
@@ -31,7 +31,7 @@ class SideMenu extends StatelessWidget {
             },
           ),
            ListTile(
-            leading: const Icon(Icons.settings, color: darkBlue,),
+            leading: const Icon(Icons.settings, color: lightBlue,),
             title: const Text('Settings & Privacy', style: TextStyle(color: darkBlue),),
             onTap: () {
               Navigator.push(

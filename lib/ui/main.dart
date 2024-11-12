@@ -143,8 +143,11 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(' Balance \n N0', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
-                          ),
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(' Balance \n N0.00', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
+                            ),
+                            ),
                           ),
                         ),
                       ),
@@ -160,8 +163,8 @@ class _HomeState extends State<Home> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: 8.0),
-                  child: Text('Services', style: TextStyle(color: lightBlue, fontSize: 22, fontWeight: FontWeight.w800
+                  padding: EdgeInsets.only(left: 12.0),
+                  child: Text('Services', style: TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
                   ),
                   ),
                 ),

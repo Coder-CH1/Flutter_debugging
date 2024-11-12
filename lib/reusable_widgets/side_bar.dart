@@ -80,7 +80,26 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  List<String> items = ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'];
+  List<String> items = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur'];
+
+  Widget getScreenForEachItem(String item) {
+    switch(item) {
+      case 'lorem':
+        return const LoremScreen();
+      case 'ipsum':
+        return const IpsumScreen();
+      case 'dolor':
+        return const DolorScreen();
+      case 'sit':
+        return const SitScreen();
+      case 'amet':
+        return const AmetScreen();
+      case 'consectetur':
+        return const Consectetur();
+      default:
+        return Container();
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +118,8 @@ class _SettingsState extends State<Settings> {
               child: InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const DetailsScreen())
+                      MaterialPageRoute(builder: (context) => getScreenForEachItem(items[index]),
+                      )
                   );
                 },
                 child: ListTile(
@@ -130,17 +150,122 @@ class _SettingsState extends State<Settings> {
 }
 
 
-class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+class LoremScreen extends StatelessWidget {
+  const LoremScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Details Screen', style: TextStyle(color: darkBlue)),
+        title: const Text('Lorem Screen', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
              // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
+    );
+  }
+}
+
+class IpsumScreen extends StatelessWidget {
+  const IpsumScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Ipsum Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+              // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
+    );
+  }
+}
+
+class DolorScreen extends StatelessWidget {
+  const DolorScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Dolor Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+              // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
+    );
+  }
+}
+
+class SitScreen extends StatelessWidget {
+  const SitScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Sit Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+              // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
+    );
+  }
+}
+
+class AmetScreen extends StatelessWidget {
+  const AmetScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Amet Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+              // logger.i('Navigating back from airtime & data screen');
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
+        ),
+        backgroundColor: lightBlue,
+      ),
+    );
+  }
+}
+
+class Consectetur extends StatelessWidget {
+  const Consectetur({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Consectetur Screen', style: TextStyle(color: darkBlue)),
+        leading: IconButton(
+            onPressed: () {
+              // logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)

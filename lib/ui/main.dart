@@ -29,6 +29,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<Color> _colorsContainer = [darkBlue, darkBlue, darkBlue];
   List<Map<String, dynamic>>services =
   [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
     {'title': 'Airtime/Data', 'widget': const AirtimeData(title: 'Airtime & Data',)},
@@ -40,6 +41,12 @@ class _HomeState extends State<Home> {
 
   void logError(String message) {
     logger.e(message);
+  }
+
+  void _toggleColor(int index) {
+  setState(() {
+    _colorsContainer[index] = _colorsContainer[index] == darkBlue ? lightBlue : darkBlue;
+  });
   }
 
   @override
@@ -162,41 +169,50 @@ class _HomeState extends State<Home> {
                     scrollDirection: Axis.horizontal,
                     child:Row(
                       children: services.map((service){
-                        return GestureDetector(
-                          onTap: () {
-                            try {
-                              logger.i('Navigating to ${service['title']}');
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => service['widget']),
-                              );
-                            } catch (e) {
-                               logger.e('Error occured while navigating $e');
-                            }
-                          },
-                          child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
-                                    alignment: Alignment.center,
-                                    decoration: const BoxDecoration(
-                                      color: darkBlue,
-                                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: lightBlue,
-                                          offset: Offset(3, 7),
-                                          blurRadius: 10,
+                        return Center(
+                          child: GestureDetector(
+                            onTap: () {
+                              try {
+                                logger.i('Navigating to ${service['title']}');
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => service['widget']),
+                                );
+                              } catch (e) {
+                                 logger.e('Error occured while navigating $e');
+                              }
+                            },
+                            child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Row(
+                                  children: [
+                                    Center(
+                                      child: GestureDetector(
+                                        onTap: ,
+                                        child: AnimatedContainer(
+                                          height: MediaQuery.of(context).size.height/8, width: MediaQuery.of(context).size.width/3,
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                            color: _colorsContainer,
+                                            borderRadius: const BorderRadius.all(Radius.circular(15)),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                color: lightBlue,
+                                                offset: Offset(3, 7),
+                                                blurRadius: 10,
+                                              ),
+                                            ],
+                                          ),
+                                          duration: const Duration(seconds: 1),
+                                          curve: Curves.fastOutSlowIn,
+                                          child: Text(service['title'], style: const TextStyle(color: whiteColor),),
                                         ),
-                                      ],
+                                      ),
                                     ),
-                                    child: Text(service['title'], style: const TextStyle(color: whiteColor),),
-                                  ),
-                                ],
-                              )
+                                  ],
+                                )
+                            ),
                           ),
                         );
                       }).toList(),

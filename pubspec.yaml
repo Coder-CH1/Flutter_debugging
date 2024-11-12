@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   logger: ^1.1.0
   flutter_emoji: ^2.5.1
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:

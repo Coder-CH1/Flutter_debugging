@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
@@ -80,6 +81,7 @@ class _HomeState extends State<Home> {
                       children: const [
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue)
                       ],
                     ),
@@ -109,8 +111,10 @@ class _HomeState extends State<Home> {
                           )
                       ),
                       const SizedBox(height: 20),
-                      Text(greetings,
-                        style: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
+                      AnimatedTextKit(animatedTexts: [
+                        TyperAnimatedText(greetings,textStyle: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
+                      ],
+                        )
                     ],
                   ),
                 ),

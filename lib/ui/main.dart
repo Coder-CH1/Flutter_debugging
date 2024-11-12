@@ -178,13 +178,13 @@ class _HomeState extends State<Home> {
                               {
                                 try {
                                   logger.i('Navigating to ${service['title']}');
-                                  //if (!mounted) return;
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (
-                                            context) => service['widget']),
-                                  );
+                              if(context.mounted) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => service['widget']),
+                                );
+                              }
                                   _toggleColor(index);
                                 } catch (e) {
                                   logger.e('Error occured while navigating $e');

@@ -184,6 +184,7 @@ class _HomeState extends State<Home> {
                                         builder: (
                                             context) => service['widget']),
                                   );
+                                  _toggleColor(index);
                                 } catch (e) {
                                   logger.e('Error occured while navigating $e');
                                 }

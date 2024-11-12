@@ -140,7 +140,7 @@ class _HomeState extends State<Home> {
                         width: MediaQuery.of(context).size.width/2,
                         child: const Align(
                           alignment: Alignment.centerLeft,
-                          child: Text(' Balance \n N444', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w300
+                          child: Text(' Balance \n N0.00', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
                           ),
                           ),
                         ),
@@ -178,6 +178,7 @@ class _HomeState extends State<Home> {
                               {
                                 try {
                                   logger.i('Navigating to ${service['title']}');
+                                  if (!mounted) return;
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

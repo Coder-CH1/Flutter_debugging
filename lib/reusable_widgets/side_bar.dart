@@ -70,25 +70,35 @@ class Profile extends StatelessWidget {
   }
 }
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
   final String title;
   const Settings({super.key, required this.title});
 
   @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
+  List<String> items = ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title, style: const TextStyle(color: darkBlue)),
+        title: Text(widget.title, style: const TextStyle(color: darkBlue)),
       ),
-      body: ListView(
-         children: const [
-      ListTile(title: Text('')),
-           ListTile(title: Text('')),
-           ListTile(title: Text('')),
-           ListTile(title: Text('')),
-           ListTile(title: Text('')),
-           ListTile(title: Text(''))
-         ]
+      body: ListView.builder(
+       itemCount: items.length,
+      itemBuilder: (context, index ) {
+        return SizedBox(
+          height: 80,
+          child: ListTile(
+            title: Text(items[index]),
+            trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_forward)),
+          ),
+        );
+      }
       )
     );
   }

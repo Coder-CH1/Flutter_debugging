@@ -79,7 +79,7 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  List<String> items = ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'];
+  List<String> items = ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,14 +89,27 @@ class _SettingsState extends State<Settings> {
       body: ListView.builder(
        itemCount: items.length,
       itemBuilder: (context, index ) {
-        return SizedBox(
-          height: 80,
-          child: ListTile(
-            title: Text(items[index]),
-            trailing: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_forward_ios_sharp)),
-          ),
+        return Column(
+          children: [
+            SizedBox(
+              height: 60,
+              child: ListTile(
+                title: Text(items[index]),
+                trailing: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.arrow_forward_ios_sharp),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: const Divider(
+                color: Colors.grey,
+                thickness: 1,
+                height: 1,
+              ),
+            )
+          ],
         );
       }
       )

@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                               {
                                 try {
                                   logger.i('Navigating to ${service['title']}');
-                                  if (!mounted) return;
+                                  //if (!mounted) return;
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

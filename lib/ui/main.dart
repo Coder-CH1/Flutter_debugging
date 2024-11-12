@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
                 Positioned(
                   top: 170,
                   child: SizedBox(
-                    width: 900,
+                    width: MediaQuery.of(context).size.width,
                     height: 190,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -80,8 +80,7 @@ class _HomeState extends State<Home> {
                       children: const [
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue)
                       ],
                     ),
                   ),

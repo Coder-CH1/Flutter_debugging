@@ -114,6 +114,7 @@ class _HomeState extends State<Home> {
                       AnimatedTextKit(animatedTexts: [
                         TyperAnimatedText(greetings,textStyle: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
                       ],
+                        totalRepeatCount: 1,
                         )
                     ],
                   ),

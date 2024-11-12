@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue)
+                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: darkBlue)
                       ],
                     ),
                   ),
@@ -145,7 +145,7 @@ class _HomeState extends State<Home> {
                           alignment: Alignment.centerLeft,
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text(' Balance \n N0.00', style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
+                            child: Text(' Balance \n N0.00', style: TextStyle(color: lightBlue, fontSize: 18, fontWeight: FontWeight.w600
                             ),
                             ),
                           ),
@@ -217,7 +217,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       duration: const Duration(seconds: 1),
                                       curve: Curves.fastOutSlowIn,
-                                      child: Text(service['title'], style: const TextStyle(color: whiteColor),),
+                                      child: Text(service['title'], style: const TextStyle(color: lightBlue),),
                                     ),
                                   ],
                                 )

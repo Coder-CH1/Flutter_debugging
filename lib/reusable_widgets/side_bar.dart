@@ -95,7 +95,7 @@ class _SettingsState extends State<Settings> {
             title: Text(items[index]),
             trailing: IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.arrow_forward)),
+                icon: const Icon(Icons.arrow_forward_ios_sharp)),
           ),
         );
       }

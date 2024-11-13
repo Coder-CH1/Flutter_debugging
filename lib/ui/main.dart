@@ -40,6 +40,13 @@ class _HomeState extends State<Home> {
     {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
 
+  static const colorizeColors = [
+    lightBlue,
+    blueColor,
+    whiteColor,
+    darkBlue
+  ];
+
   void logError(String message) {
     logger.e(message);
   }
@@ -167,8 +174,9 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(left: 12.0),
                   child: AnimatedTextKit(
                     animatedTexts: [
-                       WavyAnimatedText('Services', textStyle: TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
-                      ),
+                      ColorizeAnimatedText('Services', textStyle: const TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
+                      ), colors:
+                        colorizeColors,
                       ),
                     ],
                     isRepeatingAnimation: false,

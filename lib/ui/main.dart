@@ -163,10 +163,15 @@ class _HomeState extends State<Home> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 12.0),
-                  child: Text('Services', style: TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 12.0),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                       WavyAnimatedText('Services', textStyle: TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
+                      ),
+                      ),
+                    ],
+                    isRepeatingAnimation: false,
                   ),
                 ),
                 const SizedBox(

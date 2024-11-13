@@ -164,13 +164,17 @@ class _HomeState extends State<Home> {
                         ),
                         height: MediaQuery.of(context).size.height/10,
                         width: MediaQuery.of(context).size.width/2,
-                        child: const Align(
+                        child: Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(' Balance \n N0.00',
-                              style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
-                            ),
+                            padding: const EdgeInsets.all(8.0),
+                            child: AnimatedTextKit(
+                              animatedTexts: [
+                                TyperAnimatedText(' Balance \n N0.00',
+                                  textStyle: const TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
+                                  ),
+                                ),
+                              ]
                             ),
                           ),
                         ),

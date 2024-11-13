@@ -17,9 +17,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: blackColor,
+      ),
+      home: const Home(),
     );
   }
 }
@@ -102,8 +105,8 @@ class _HomeState extends State<Home> {
                               child: CreditCard(
                                   number: 9290, valid: 'VALID 20/24',
                                   image: 'mastercard.png',
-                                  color: lightBlue),
-                            ), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                                  color: darkBlue),
+                            ), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: lightBlue),
                         ),
                       ],
                     ),
@@ -196,7 +199,7 @@ class _HomeState extends State<Home> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 12.0),
+                  padding: const EdgeInsets.only(left: 12.0, top: 20),
                   child: AnimatedTextKit(
                     animatedTexts: [
                       ColorizeAnimatedText('Services',

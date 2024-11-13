@@ -42,8 +42,8 @@ class _HomeState extends State<Home> {
 
   static const colorizeColors = [
     lightBlue,
-    blueColor,
-    whiteColor,
+    Colors.green,
+    Colors.red,
     darkBlue
   ];
 

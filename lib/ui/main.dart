@@ -81,7 +81,8 @@ class _HomeState extends State<Home> {
                       children: const [
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
                         CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue)
+                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
+                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
                       ],
                     ),
                   ),

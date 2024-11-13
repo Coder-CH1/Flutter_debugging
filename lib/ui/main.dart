@@ -121,7 +121,7 @@ class _HomeState extends State<Home> {
                               Row(
                                 children: [
                                   IconButton(
-                                      icon: const Icon(Icons.view_headline_sharp, color: blueColor),
+                                      icon: const Icon(Icons.dehaze, color: blueColor),
                                       onPressed: () {
                                         logger.i('');
                                         Scaffold.of(context).openDrawer();

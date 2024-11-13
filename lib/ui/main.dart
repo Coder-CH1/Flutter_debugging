@@ -40,13 +40,6 @@ class _HomeState extends State<Home> {
     {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
 
-  static const colorizeColors = [
-    lightBlue,
-    Colors.green,
-    Colors.red,
-    darkBlue
-  ];
-
   void logError(String message) {
     logger.e(message);
   }
@@ -60,7 +53,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var parser = EmojiParser();
-    String greetings = parser.emojify(':wave: Hi Melvis');
+    String greetings = parser.emojify(':wave: Hi MELVIS');
     logger.d('Home widget services: $services');
     return Scaffold(
       drawer: const SideMenu(),
@@ -231,7 +224,7 @@ class _HomeState extends State<Home> {
                                       ),
                                       duration: const Duration(seconds: 1),
                                       curve: Curves.fastOutSlowIn,
-                                      child: Text(service['title'], style: const TextStyle(color: lightBlue),),
+                                      child: Text(service['title'], style: const TextStyle(color: whiteColor),),
                                     ),
                                   ],
                                 )

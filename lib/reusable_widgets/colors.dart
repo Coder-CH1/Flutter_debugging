@@ -12,6 +12,8 @@ const colorizeColors = [
   lightBlue,
   Colors.green,
   Colors.red,
+  Colors.purple,
+  Colors.yellowAccent,
   darkBlue,
   lightBlue,
 

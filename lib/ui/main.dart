@@ -134,7 +134,9 @@ class _HomeState extends State<Home> {
                       ),
                       const SizedBox(height: 20),
                       AnimatedTextKit(animatedTexts: [
-                        TyperAnimatedText(greetings,textStyle: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
+                        TyperAnimatedText(greetings,
+                          speed: const Duration(milliseconds: 200),
+                          textStyle: const TextStyle(color: darkBlue, fontSize: 22, fontWeight: FontWeight.w700),)
                       ],
                         totalRepeatCount: 1,
                         )
@@ -170,11 +172,14 @@ class _HomeState extends State<Home> {
                             padding: const EdgeInsets.all(8.0),
                             child: AnimatedTextKit(
                               animatedTexts: [
-                                TyperAnimatedText(' Balance \n N0.00',
+                                TyperAnimatedText(
+                                  ' Balance \n N0.00',
+                                  speed: const Duration(milliseconds: 150),
                                   textStyle: const TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
                                   ),
                                 ),
-                              ]
+                              ],
+                              totalRepeatCount: 2,
                             ),
                           ),
                         ),
@@ -195,6 +200,7 @@ class _HomeState extends State<Home> {
                   child: AnimatedTextKit(
                     animatedTexts: [
                       ColorizeAnimatedText('Services',
+                        speed: const Duration(milliseconds: 400),
                         textStyle: const TextStyle(color: lightBlue, fontSize: 30, fontWeight: FontWeight.w800,
                       ), colors:
                         colorizeColors,

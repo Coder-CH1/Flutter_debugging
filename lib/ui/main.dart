@@ -1,9 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flip_card/flip_card.dart';
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
-
 import '../logger/logger.dart';
 
 void main() {
@@ -30,6 +31,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final FlipCardController _flipCardController = FlipCardController();
   final List<Color> _colorsContainer = [darkBlue, darkBlue, darkBlue, darkBlue, darkBlue, darkBlue];
   List<Map<String, dynamic>>services =
   [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
@@ -50,6 +52,16 @@ class _HomeState extends State<Home> {
   });
   }
 
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 1), () {
+      _flipCardController.toggleCard();
+    });
+    Future.delayed(const Duration(seconds: 3), () {
+      _flipCardController.toggleCard();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     var parser = EmojiParser();
@@ -78,11 +90,40 @@ class _HomeState extends State<Home> {
                       scrollDirection: Axis.horizontal,
                       physics: const AlwaysScrollableScrollPhysics(),
                       shrinkWrap: true,
-                      children: const [
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'mastercard.png', color: lightBlue),
-                        CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                      children: [
+                        FlipCard(
+                          controller: _flipCardController,
+                          flipOnTouch: false,
+                          fill: Fill.fillBack,
+                            direction: FlipDirection.VERTICAL,
+                            side: CardSide.FRONT,
+                            front: const CreditCard(
+                                number: 9290, valid: 'VALID 20/24',
+                                image: 'mastercard.png',
+                                color: lightBlue), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                        ),
+                        //  FlipCard(
+                        //   controller: _flipCardController,
+                        //   flipOnTouch: false,
+                        //   fill: Fill.fillBack,
+                        //   direction: FlipDirection.VERTICAL,
+                        //  // side: CardSide.FRONT,
+                        //   front: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue), back: const CreditCard(
+                        //     number: 9290, valid: 'VALID 20/24',
+                        //     image: 'mastercard.png',
+                        //     color: lightBlue),
+                        // ),
+                        // FlipCard(
+                        //   controller: _flipCardController,
+                        //   flipOnTouch: false,
+                        //   fill: Fill.fillBack,
+                        //   direction: FlipDirection.VERTICAL,
+                        //   side: CardSide.FRONT,
+                        //   front: const CreditCard(
+                        //       number: 9290, valid: 'VALID 20/24',
+                        //       image: 'mastercard.png',
+                        //       color: lightBlue), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                        // ),
                       ],
                     ),
                   ),

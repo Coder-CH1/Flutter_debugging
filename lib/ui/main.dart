@@ -168,7 +168,8 @@ class _HomeState extends State<Home> {
                           alignment: Alignment.centerLeft,
                           child: Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text(' Balance \n N0.00', style: TextStyle(color: lightBlue, fontSize: 18, fontWeight: FontWeight.w600
+                            child: Text(' Balance \n N0.00',
+                              style: TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
                             ),
                             ),
                           ),
@@ -189,7 +190,8 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.only(left: 12.0),
                   child: AnimatedTextKit(
                     animatedTexts: [
-                      ColorizeAnimatedText('Services', textStyle: const TextStyle(color: lightBlue, fontSize: 26, fontWeight: FontWeight.w800,
+                      ColorizeAnimatedText('Services',
+                        textStyle: const TextStyle(color: lightBlue, fontSize: 30, fontWeight: FontWeight.w800,
                       ), colors:
                         colorizeColors,
                       ),

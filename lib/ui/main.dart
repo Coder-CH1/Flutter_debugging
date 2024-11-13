@@ -97,33 +97,14 @@ class _HomeState extends State<Home> {
                           fill: Fill.fillBack,
                             direction: FlipDirection.VERTICAL,
                             side: CardSide.FRONT,
-                            front: const CreditCard(
-                                number: 9290, valid: 'VALID 20/24',
-                                image: 'mastercard.png',
-                                color: lightBlue), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
+                            front: const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: CreditCard(
+                                  number: 9290, valid: 'VALID 20/24',
+                                  image: 'mastercard.png',
+                                  color: lightBlue),
+                            ), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
                         ),
-                        //  FlipCard(
-                        //   controller: _flipCardController,
-                        //   flipOnTouch: false,
-                        //   fill: Fill.fillBack,
-                        //   direction: FlipDirection.VERTICAL,
-                        //  // side: CardSide.FRONT,
-                        //   front: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue), back: const CreditCard(
-                        //     number: 9290, valid: 'VALID 20/24',
-                        //     image: 'mastercard.png',
-                        //     color: lightBlue),
-                        // ),
-                        // FlipCard(
-                        //   controller: _flipCardController,
-                        //   flipOnTouch: false,
-                        //   fill: Fill.fillBack,
-                        //   direction: FlipDirection.VERTICAL,
-                        //   side: CardSide.FRONT,
-                        //   front: const CreditCard(
-                        //       number: 9290, valid: 'VALID 20/24',
-                        //       image: 'mastercard.png',
-                        //       color: lightBlue), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: darkBlue),
-                        // ),
                       ],
                     ),
                   ),

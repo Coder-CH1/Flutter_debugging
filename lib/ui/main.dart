@@ -174,7 +174,7 @@ class _HomeState extends State<Home> {
                               animatedTexts: [
                                 TyperAnimatedText(
                                   ' Balance \n N0.00',
-                                  speed: const Duration(milliseconds: 150),
+                                  speed: const Duration(milliseconds: 250),
                                   textStyle: const TextStyle(color: whiteColor, fontSize: 18, fontWeight: FontWeight.w600
                                   ),
                                 ),
@@ -200,7 +200,8 @@ class _HomeState extends State<Home> {
                   child: AnimatedTextKit(
                     animatedTexts: [
                       ColorizeAnimatedText('Services',
-                        speed: const Duration(milliseconds: 400),
+                        speed: const Duration(milliseconds: 3000),
+                        //textDirection: TextDirection.rtl,
                         textStyle: const TextStyle(color: lightBlue, fontSize: 30, fontWeight: FontWeight.w800,
                       ), colors:
                         colorizeColors,

@@ -12,5 +12,7 @@ const colorizeColors = [
   lightBlue,
   Colors.green,
   Colors.red,
-  Colors.purple
+  darkBlue,
+  lightBlue,
+
 ];

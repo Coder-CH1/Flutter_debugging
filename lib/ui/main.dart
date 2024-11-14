@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
                       children: [
                         FlipCard(
                           controller: _flipCardController,
-                          flipOnTouch: false,
+                          flipOnTouch: true,
                           fill: Fill.fillBack,
                             direction: FlipDirection.VERTICAL,
                             side: CardSide.FRONT,
@@ -106,7 +106,8 @@ class _HomeState extends State<Home> {
                                   number: 9290, valid: 'VALID 20/24',
                                   image: 'mastercard.png',
                                   color: darkBlue),
-                            ), back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: lightBlue),
+                            ),
+                          back: const CreditCard(number: 9290, valid: 'VALID 20/24', image: 'visa.png', color: lightBlue),
                         ),
                       ],
                     ),

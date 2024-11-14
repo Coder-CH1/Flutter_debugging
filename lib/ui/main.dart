@@ -333,10 +333,9 @@ class CreditCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: RichText(text: TextSpan(children: [
-                    const TextSpan(text: 'Agbachi Chidiogo Melvis\n', style: TextStyle(fontSize: 22, color: Colors.blueAccent),),
+                    const TextSpan(text: 'Agbachi Chidiogo Melvis\n', style: TextStyle(fontSize: 22, color: blueColor),),
                     TextSpan(text: '**** **** **** ${number.toString()}\n', style: const TextStyle(fontSize: 22),),
-                    TextSpan(text: valid, style: const TextStyle(fontSize: 14, color: Colors.blueAccent, fontWeight: FontWeight.w300,
-                    ),
+                    TextSpan(text: valid, style: const TextStyle(fontSize: 14, color: blueColor, fontWeight: FontWeight.w300,),
                     ),
                   ]
                   )

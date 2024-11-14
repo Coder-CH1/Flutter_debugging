@@ -117,10 +117,11 @@ class _SettingsState extends State<Settings> {
                         });
                       },
                   ) :
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios_sharp, color: lightBlue),
-                  ),
+                      const Text(''),
+                  // IconButton(
+                  //     onPressed: () {},
+                  //     icon: const Icon(),
+                  // ),
                 ),
               ),
             ),

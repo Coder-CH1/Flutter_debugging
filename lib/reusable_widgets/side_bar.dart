@@ -85,6 +85,26 @@ class _SettingsState extends State<Settings> {
 
   bool isSwitchOn = false;
 
+  void _showContactDetails() {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Contact Us'),
+            content: const Text('You can contact us at @.com'),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('OK')
+              )
+            ],
+          );
+        }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +123,11 @@ class _SettingsState extends State<Settings> {
               //color: darkBlue,
               height: 60,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  if (currentItem == 'Contact Us') {
+                    _showContactDetails();
+                  }
+                },
                 child: ListTile(
                   title: Text(items[index], style: const TextStyle(
                     color: lightBlue,

@@ -41,6 +41,12 @@ class SideMenu extends StatelessWidget {
               );
             },
           ),
+          const ListTile(
+            title: Text('Logout', style: TextStyle(
+              color: Colors.red,
+             // fontSize:
+            )),
+          )
         ],
       ),
     );

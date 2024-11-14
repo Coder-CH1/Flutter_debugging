@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_debugging/reusable_widgets/colors.dart';
 import 'package:flutter_debugging/reusable_widgets/side_bar.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 import '../logger/logger.dart';
 
-SharedPreferencesWithCache prefs = prefs;
+//SharedPreferencesWithCache prefs = prefs;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  prefs = (await SharedPreferences.getInstance()) as SharedPreferencesWithCache;
+  //prefs = (await SharedPreferences.getInstance()) as SharedPreferencesWithCache;
   runApp(const MyApp());
 }
 

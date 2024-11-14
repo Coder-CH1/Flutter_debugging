@@ -22,7 +22,7 @@ class SideMenu extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.home, color: lightBlue,),
-            title: const Text('Profile', style: TextStyle(color: darkBlue),),
+            title: const Text('Profile', style: TextStyle(color: lightBlue),),
             onTap: () {
               Navigator.push(
                   context,
@@ -32,7 +32,7 @@ class SideMenu extends StatelessWidget {
           ),
            ListTile(
             leading: const Icon(Icons.settings, color: lightBlue,),
-            title: const Text('Settings & Privacy', style: TextStyle(color: darkBlue),),
+            title: const Text('Settings & Privacy', style: TextStyle(color: lightBlue),),
             onTap: () {
               Navigator.push(
                 context,
@@ -124,11 +124,11 @@ class _SettingsState extends State<Settings> {
                 },
                 child: ListTile(
                   title: Text(items[index], style: const TextStyle(
-                    color: darkBlue,
+                    color: lightBlue,
                   ),),
                   trailing: IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios_sharp, color: darkBlue),
+                      icon: const Icon(Icons.arrow_forward_ios_sharp, color: lightBlue),
                   ),
                 ),
               ),
@@ -136,7 +136,7 @@ class _SettingsState extends State<Settings> {
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Divider(
-                color: Colors.grey,
+                color: lightBlue,
                 thickness: 1,
                 height: 1,
               ),

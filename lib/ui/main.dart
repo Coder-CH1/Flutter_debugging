@@ -13,7 +13,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -36,6 +35,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final FlipCardController _flipCardController = FlipCardController();
   final List<Color> _colorsContainer = [darkBlue, darkBlue, darkBlue, darkBlue, darkBlue, darkBlue];
+
   List<Map<String, dynamic>>services =
   [{'title': 'Local Transfers', 'widget': const LocalTransfers(title: 'Local Transfers',)},
     {'title': 'Airtime/Data', 'widget': const AirtimeData(title: 'Airtime & Data',)},
@@ -44,11 +44,11 @@ class _HomeState extends State<Home> {
     {'title': 'BVN', 'widget': const BVN(title: 'BVN',)},
     {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
-
+//
   void logError(String message) {
     logger.e(message);
   }
-
+//
   void _toggleColor(int index) {
   setState(() {
     _colorsContainer[index] = _colorsContainer[index] == darkBlue ? lightBlue : darkBlue;
@@ -56,6 +56,7 @@ class _HomeState extends State<Home> {
   }
 
   @override
+//LIFE CYCLE
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 1), () {

@@ -118,10 +118,6 @@ class _SettingsState extends State<Settings> {
                       },
                   ) :
                       const Text(''),
-                  // IconButton(
-                  //     onPressed: () {},
-                  //     icon: const Icon(),
-                  // ),
                 ),
               ),
             ),

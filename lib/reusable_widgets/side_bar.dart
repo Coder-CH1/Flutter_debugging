@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../logger/logger.dart';
 import 'colors.dart';
 
 
@@ -80,28 +81,10 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  List<String> items = ['Light / Dark Mode', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur'];
+  List<String> items = ['Light / Dark Mode', 'Contact Us', 'dolor', 'sit', 'amet', 'consectetur'];
 
   bool isSwitchOn = false;
 
-  // Widget getScreenForEachItem(String item) {
-  //   switch(item) {
-  //     case 'lorem':
-  //       return const '';
-  //     case 'ipsum':
-  //       return const IpsumScreen();
-  //     case 'dolor':
-  //       return const DolorScreen();
-  //     case 'sit':
-  //       return const SitScreen();
-  //     case 'amet':
-  //       return const AmetScreen();
-  //     case 'consectetur':
-  //       return const Consectetur();
-  //     default:
-  //       return Container();
-  //   }
-  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,49 +140,6 @@ class _SettingsState extends State<Settings> {
   }
 }
 
-
-class LoremScreen extends StatelessWidget {
-  const LoremScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Lorem Screen', style: TextStyle(color: darkBlue)),
-        leading: IconButton(
-            onPressed: () {
-             // logger.i('Navigating back from airtime & data screen');
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
-        ),
-        backgroundColor: lightBlue,
-      ),
-    );
-  }
-}
-
-class IpsumScreen extends StatelessWidget {
-  const IpsumScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Ipsum Screen', style: TextStyle(color: darkBlue)),
-        leading: IconButton(
-            onPressed: () {
-              // logger.i('Navigating back from airtime & data screen');
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
-        ),
-        backgroundColor: lightBlue,
-      ),
-    );
-  }
-}
-
 class DolorScreen extends StatelessWidget {
   const DolorScreen({super.key});
 
@@ -210,7 +150,7 @@ class DolorScreen extends StatelessWidget {
         title: const Text('Dolor Screen', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              // logger.i('Navigating back from airtime & data screen');
+               logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
@@ -231,7 +171,7 @@ class SitScreen extends StatelessWidget {
         title: const Text('Sit Screen', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              // logger.i('Navigating back from airtime & data screen');
+               logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
@@ -252,7 +192,7 @@ class AmetScreen extends StatelessWidget {
         title: const Text('Amet Screen', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              // logger.i('Navigating back from airtime & data screen');
+               logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)
@@ -273,7 +213,7 @@ class Consectetur extends StatelessWidget {
         title: const Text('Consectetur Screen', style: TextStyle(color: darkBlue)),
         leading: IconButton(
             onPressed: () {
-              // logger.i('Navigating back from airtime & data screen');
+               logger.i('Navigating back from airtime & data screen');
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_ios_new_sharp, color: darkBlue)

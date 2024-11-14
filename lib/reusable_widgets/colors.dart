@@ -18,5 +18,4 @@ const colorizeColors = [
   Colors.yellowAccent,
   darkBlue,
   lightBlue,
-
 ];

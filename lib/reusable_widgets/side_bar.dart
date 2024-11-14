@@ -82,10 +82,12 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   List<String> items = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur'];
 
+  bool isSwitchOn = false;
+
   Widget getScreenForEachItem(String item) {
     switch(item) {
       case 'lorem':
-        return const LoremScreen();
+        return const Center();
       case 'ipsum':
         return const IpsumScreen();
       case 'dolor':
@@ -110,6 +112,8 @@ class _SettingsState extends State<Settings> {
       body: ListView.builder(
        itemCount: items.length,
       itemBuilder: (context, index ) {
+         String currentItem = items[index];
+         bool isSwitchEnabled = currentItem == 'lorem';
         return Column(
           children: [
             SizedBox(
@@ -125,8 +129,17 @@ class _SettingsState extends State<Settings> {
                 child: ListTile(
                   title: Text(items[index], style: const TextStyle(
                     color: lightBlue,
-                  ),),
-                  trailing: IconButton(
+                  ),
+                  ),
+                  trailing: isSwitchEnabled  ? Switch(
+                      value: isSwitchOn,
+                      onChanged: (bool newValue) {
+                      setState(() {
+                      isSwitchOn = newValue;
+                        });
+                      },
+                  ) :
+                  IconButton(
                       onPressed: () {},
                       icon: const Icon(Icons.arrow_forward_ios_sharp, color: lightBlue),
                   ),

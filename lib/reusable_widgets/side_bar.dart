@@ -21,7 +21,7 @@ class SideMenu extends StatelessWidget {
           ),
           ),
           ListTile(
-            leading: const Icon(Icons.home, color: lightBlue,),
+            leading: const Icon(Icons.person_pin, color: lightBlue,),
             title: const Text('Profile', style: TextStyle(color: lightBlue),),
             onTap: () {
               Navigator.push(
@@ -60,7 +60,7 @@ class Profile extends StatelessWidget {
       body: const Center(
         child: Column(
           children: [
-            Icon(Icons.person, color: darkBlue, size: 100),
+            Icon(Icons.person_pin, color: lightBlue, size: 100),
             Text(''),
             Text(''),
             Text('')

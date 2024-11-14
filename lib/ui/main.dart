@@ -282,7 +282,6 @@ class _HomeState extends State<Home> {
   }
 }
 
-//
 class CreditCard extends StatelessWidget {
   final int number;
   final String valid;
@@ -351,7 +350,6 @@ class CreditCard extends StatelessWidget {
   }
 }
 
-//
 class LocalTransfers extends StatefulWidget {
   final String title;
   const LocalTransfers({super.key, required this.title});
@@ -386,7 +384,6 @@ class _LocalTransfersState extends State<LocalTransfers> {
   }
 }
 
-//
 class AirtimeData extends StatefulWidget {
   final String title;
   const AirtimeData({super.key, required this.title});
@@ -420,7 +417,6 @@ class _AirtimeDataState extends State<AirtimeData> {
   }
 }
 
-//
 class OpenAccount extends StatefulWidget {
   final String title;
   const OpenAccount({super.key, required this.title});
@@ -454,7 +450,6 @@ class _OpenAccountState extends State<OpenAccount> {
   }
 }
 
-//
 class BillPayment extends StatefulWidget {
   final String title;
   const BillPayment({super.key, required this.title});

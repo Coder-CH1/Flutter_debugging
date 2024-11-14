@@ -80,28 +80,28 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  List<String> items = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur'];
+  List<String> items = ['Light / Dark Mode', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur'];
 
   bool isSwitchOn = false;
 
-  Widget getScreenForEachItem(String item) {
-    switch(item) {
-      case 'lorem':
-        return const Center();
-      case 'ipsum':
-        return const IpsumScreen();
-      case 'dolor':
-        return const DolorScreen();
-      case 'sit':
-        return const SitScreen();
-      case 'amet':
-        return const AmetScreen();
-      case 'consectetur':
-        return const Consectetur();
-      default:
-        return Container();
-    }
-  }
+  // Widget getScreenForEachItem(String item) {
+  //   switch(item) {
+  //     case 'lorem':
+  //       return const '';
+  //     case 'ipsum':
+  //       return const IpsumScreen();
+  //     case 'dolor':
+  //       return const DolorScreen();
+  //     case 'sit':
+  //       return const SitScreen();
+  //     case 'amet':
+  //       return const AmetScreen();
+  //     case 'consectetur':
+  //       return const Consectetur();
+  //     default:
+  //       return Container();
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,19 +113,14 @@ class _SettingsState extends State<Settings> {
        itemCount: items.length,
       itemBuilder: (context, index ) {
          String currentItem = items[index];
-         bool isSwitchEnabled = currentItem == 'lorem';
+         bool isSwitchEnabled = currentItem == 'Light / Dark Mode';
         return Column(
           children: [
             SizedBox(
               //color: darkBlue,
               height: 60,
               child: InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => getScreenForEachItem(items[index]),
-                      )
-                  );
-                },
+                onTap: () {},
                 child: ListTile(
                   title: Text(items[index], style: const TextStyle(
                     color: lightBlue,

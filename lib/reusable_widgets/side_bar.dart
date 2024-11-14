@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../logger/logger.dart';
 import 'colors.dart';
 
-
+//SIDE MENU
 class SideMenu extends StatelessWidget {
   const SideMenu({
     super.key,
@@ -47,6 +47,7 @@ class SideMenu extends StatelessWidget {
   }
 }
 
+//SIDE MENU CONTENTS
 class Profile extends StatelessWidget {
   final String title;
   const Profile({super.key, required this.title});
@@ -72,6 +73,7 @@ class Profile extends StatelessWidget {
   }
 }
 
+//SIDE MENU CONTENTS
 class Settings extends StatefulWidget {
   final String title;
   const Settings({super.key, required this.title});
@@ -161,6 +163,7 @@ class _SettingsState extends State<Settings> {
   }
 }
 
+//
 class DolorScreen extends StatelessWidget {
   const DolorScreen({super.key});
 
@@ -182,6 +185,7 @@ class DolorScreen extends StatelessWidget {
   }
 }
 
+//
 class SitScreen extends StatelessWidget {
   const SitScreen({super.key});
 
@@ -203,6 +207,7 @@ class SitScreen extends StatelessWidget {
   }
 }
 
+//
 class AmetScreen extends StatelessWidget {
   const AmetScreen({super.key});
 
@@ -224,6 +229,7 @@ class AmetScreen extends StatelessWidget {
   }
 }
 
+//
 class Consectetur extends StatelessWidget {
   const Consectetur({super.key});
 

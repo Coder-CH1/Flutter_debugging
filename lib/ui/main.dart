@@ -45,11 +45,11 @@ class _HomeState extends State<Home> {
     {'title': 'BVN', 'widget': const BVN(title: 'BVN',)},
     {'title': 'Request for ATM', 'widget': const RequestATM(title: 'Request for ATM',)},
   ];
-//
+///
   void logError(String message) {
     logger.e(message);
   }
-//
+///
   void _toggleColor(int index) {
   setState(() {
     _colorsContainer[index] = _colorsContainer[index] == darkBlue ? lightBlue : darkBlue;
@@ -283,7 +283,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-//
+///
 class CreditCard extends StatelessWidget {
   final int number;
   final String valid;
@@ -351,7 +351,7 @@ class CreditCard extends StatelessWidget {
   }
 }
 
-//
+///
 class LocalTransfers extends StatefulWidget {
   final String title;
   const LocalTransfers({super.key, required this.title});
@@ -386,7 +386,7 @@ class _LocalTransfersState extends State<LocalTransfers> {
   }
 }
 
-//
+///
 class AirtimeData extends StatefulWidget {
   final String title;
   const AirtimeData({super.key, required this.title});
@@ -420,7 +420,7 @@ class _AirtimeDataState extends State<AirtimeData> {
   }
 }
 
-//
+///
 class OpenAccount extends StatefulWidget {
   final String title;
   const OpenAccount({super.key, required this.title});
@@ -454,7 +454,7 @@ class _OpenAccountState extends State<OpenAccount> {
   }
 }
 
-//
+///
 class BillPayment extends StatefulWidget {
   final String title;
   const BillPayment({super.key, required this.title});
@@ -488,7 +488,7 @@ class _BillPaymentState extends State<BillPayment> {
   }
 }
 
-//
+///
 class BVN extends StatefulWidget {
   final String title;
   const BVN({super.key, required this.title});
@@ -522,7 +522,7 @@ class _BVNState extends State<BVN> {
   }
 }
 
-//
+///
 class RequestATM extends StatefulWidget {
   final String title;
   const RequestATM({super.key, required this.title});

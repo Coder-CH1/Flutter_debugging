@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../logger/logger.dart';
 import 'colors.dart';
 
-//SIDE MENU
+/// SIDE MENU
 class SideMenu extends StatelessWidget {
   const SideMenu({
     super.key,

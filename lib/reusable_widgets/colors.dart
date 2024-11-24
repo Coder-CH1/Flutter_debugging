@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//REUSABLE COLORS
+/// REUSABLE COLORS
 const whiteColor = Colors.white;
 
 const blueColor = Colors.blue;

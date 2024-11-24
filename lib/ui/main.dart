@@ -283,7 +283,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-///
+/// REUSABLE CREDIT CARD WIDGET.
 class CreditCard extends StatelessWidget {
   final int number;
   final String valid;

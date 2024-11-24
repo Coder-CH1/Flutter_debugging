@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
   }
 
   @override
-//LIFE CYCLE
+/// LIFE CYCLE
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 1), () {

@@ -72,11 +72,12 @@ class Profile extends StatelessWidget {
             Icon(Icons.person_pin, color: lightBlue, size: 100),
             SizedBox(height: 20),
             Icon(Icons.email, color: blueColor),
-            Text(''),
+            SizedBox(height: 20),
+            Icon(Icons.phone, color: blueColor),
             Text('')
           ],
+        )
         ),
-      )
     );
   }
 }

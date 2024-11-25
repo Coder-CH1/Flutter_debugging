@@ -169,7 +169,7 @@ class _SettingsState extends State<Settings> {
   }
 }
 
-///
+/// SETTING CONTENTS
 class DolorScreen extends StatelessWidget {
   const DolorScreen({super.key});
 
@@ -191,7 +191,7 @@ class DolorScreen extends StatelessWidget {
   }
 }
 
-///
+/// SETTING CONTENTS
 class SitScreen extends StatelessWidget {
   const SitScreen({super.key});
 
@@ -213,7 +213,7 @@ class SitScreen extends StatelessWidget {
   }
 }
 
-///
+/// SETTING CONTENTS
 class AmetScreen extends StatelessWidget {
   const AmetScreen({super.key});
 
@@ -235,7 +235,7 @@ class AmetScreen extends StatelessWidget {
   }
 }
 
-///
+/// SETTING CONTENTS
 class Consectetur extends StatelessWidget {
   const Consectetur({super.key});
 

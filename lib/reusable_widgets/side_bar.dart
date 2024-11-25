@@ -65,11 +65,13 @@ class Profile extends StatelessWidget {
         title: Text(title, style: const TextStyle(color: darkBlue)),
         backgroundColor: lightBlue,
       ),
-      body: const Center(
+      body: const Padding(
+        padding: EdgeInsets.all(8.0),
         child: Column(
           children: [
             Icon(Icons.person_pin, color: lightBlue, size: 100),
-            Text(''),
+            SizedBox(height: 20),
+            Icon(Icons.email, color: blueColor),
             Text(''),
             Text('')
           ],

@@ -78,7 +78,6 @@ class Profile extends StatelessWidget {
               Icon(Icons.email, color: blueColor),
               SizedBox(height: 20),
               Icon(Icons.phone, color: blueColor),
-              Text('')
             ],
           ),
         )

@@ -65,17 +65,22 @@ class Profile extends StatelessWidget {
         title: Text(title, style: const TextStyle(color: darkBlue)),
         backgroundColor: lightBlue,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Icon(Icons.person_pin, color: lightBlue, size: 100),
-            SizedBox(height: 20),
-            Icon(Icons.email, color: blueColor),
-            SizedBox(height: 20),
-            Icon(Icons.phone, color: blueColor),
-            Text('')
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          color: lightBlue,
+          child: const Column(
+            children: [
+              Icon(Icons.person_pin, color: lightBlue, size: 100),
+              SizedBox(height: 20),
+              Icon(Icons.email, color: blueColor),
+              SizedBox(height: 20),
+              Icon(Icons.phone, color: blueColor),
+              Text('')
+            ],
+          ),
         )
         ),
     );
